@@ -2,7 +2,7 @@
 
 namespace App\DataObjects;
 
-class Skills {
+class Skill {
 
     public function __construct(
         public string $name = '',
@@ -13,8 +13,8 @@ class Skills {
 
     public static function fromArray(Array $data): self{
         return new self (
-            name : $data['skills']['name'],
-            level : $data['skills']['level'],
-            keywords : $data['skills']['keywords']
+            name : $data['name'],
+            level : $data['level'],
+            keywords : $data['keywords']
         );}
 }

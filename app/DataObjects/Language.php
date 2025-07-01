@@ -2,7 +2,7 @@
 
 namespace App\DataObjects;
 
-class Languages {
+class Language {
 
     public function __construct(
         public string $language,
@@ -12,7 +12,7 @@ class Languages {
 
     public static function fromArray(Array $data): self{
         return new self (
-            language : $data['languages']['langauage'],
-            fluency : $data['languages']['fluency']
+            language : $data['language'],
+            fluency : $data['fluency']
         );}
 }

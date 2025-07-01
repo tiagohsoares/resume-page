@@ -2,7 +2,7 @@
 
 namespace App\DataObjects;
 
-class Social {
+class SocialProfile {
 
     public function __construct(
         public string $network = '',
@@ -13,8 +13,8 @@ class Social {
 
     public static function fromArray(Array $data): self{
         return new self (
-            network : $data['profiles']['network'],
-            username : $data['profiles']['username'],
-            url : $data['profiles']['url']
+            network : $data['network'],
+            username : $data['username'],
+            url : $data['url']
         );}
 }

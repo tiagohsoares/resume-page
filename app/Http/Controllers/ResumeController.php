@@ -11,7 +11,7 @@ class ResumeController extends Controller
 {
     public function index(Factory $view){
 
-        dd(storage::get('resume.json'));
+        storage::get('resume.json');
         return $view->make('resume');
     }
 }

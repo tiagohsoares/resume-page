@@ -2,7 +2,7 @@
 
 namespace App\DataObjects;
 
-class Skill {
+readonly class Skills {
 
     public function __construct(
         public string $name = '',

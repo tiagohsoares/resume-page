@@ -18,7 +18,7 @@ readonly class Basics {
 
 public static function fromArray(Array $data): self{
 
-    $location = isset($data['basics']['location']) ? Location::fromArray($data) : new Location();
+    $location = isset($data['location']) ? Location::fromArray($data['location']) : new Location();
     if (isset($data['profiles']) && is_array($data['profiles'])) {
         foreach ($data['profiles'] as $profile) {
             $profiles[] = SocialProfile::fromArray($profile);

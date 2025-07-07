@@ -2,7 +2,7 @@
 
 namespace App\DataObjects;
 
-class Language {
+readonly class Language {
 
     public function __construct(
         public string $language,

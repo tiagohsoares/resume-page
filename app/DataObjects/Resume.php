@@ -62,11 +62,11 @@ readonly class Resume
             awards:       $extractData($data, 'awards', Award::class),
             certificates: $extractData($data, 'certificates', Certificate::class),
             publications: $extractData($data, 'publications', Publication::class),
-            skills:       $extractData($data, 'skills', Skill::class),
+            skills:       $extractData($data, 'skills', Skills::class),
             languages:    $extractData($data, 'languages', Language::class),
             interests:    $extractData($data, 'interests', Interest::class),
             references:   $extractData($data, 'references', Reference::class),
-            projects:     $extractData($data, 'projects', Project::class),
+            projects:     $extractData($data, 'projects', Projects::class),
         );
     }
 }

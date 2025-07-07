@@ -2,7 +2,7 @@
 
 namespace App\DataObjects;
 
-class SocialProfile {
+readonly class SocialProfile {
 
     public function __construct(
         public string $network = '',

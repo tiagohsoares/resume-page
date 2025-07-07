@@ -2,7 +2,7 @@
 
 namespace App\DataObjects;
 
-class Certificate {
+readonly class Certificate {
 
     public function __construct(
         public string $name = '',

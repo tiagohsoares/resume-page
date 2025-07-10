@@ -22,7 +22,6 @@ class ResumeController extends Controller
 
         return $view->make('resume' , ['resume' => $resume]);
     }
-
     public function download ()
     {
         $resume = Cache::remember('resumeData', now()->addDay(), function () {

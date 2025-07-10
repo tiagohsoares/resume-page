@@ -1,4 +1,3 @@
-
 <x-layout :title=" $resume->basics->name . ' Resume' ">
     <x-slot:header>
                         <h1 class="text-4xl font-bold text-gray-900">{{$resume->basics->name}}</h1>
@@ -20,7 +19,7 @@
             @if (isset($resume->basics->profiles))
                 <div class="mt-1 flex flex-wrap">
                     @foreach ( $resume->basics->profiles as $profiles )
-                            <a href="{{$profiles->url}}" class="px-3 py-1.5 bg-white rounded-full shadow-sm text-sm hover:underline text-gray-700">{{$profiles->network}}</a>
+                            <a href="{{$profiles->url}}" target="_blank" class="px-3 py-1.5 bg-white rounded-full shadow-sm text-sm hover:underline text-gray-700">{{$profiles->network}}</a>
                     @endforeach
                 </div>
             @endif
@@ -51,7 +50,7 @@
                             @endif
 
                         <div class="mt-2">
-                            <a href="{{$work->url}}" class="mt-4 text-sm hover:underline text-blue-600"> {{$work->url}}</a>
+                            <a href="{{$work->url}}" target="_blank" class="mt-4 text-sm hover:underline text-blue-600"> {{$work->url}}</a>
                             <p class="mt-2 text-base">{{$work->summary}}</p>
                             @if(!empty($work->highlights))
                                 <ul class="list-disc list-outside mt-2 space-y-0.5 ml-4">
@@ -76,14 +75,14 @@
                                     <h3 class="pl-2 text-lg font-semibold text-gray-700">{{$skills->name}}</h3>
                                 @endif
 
-                                @if($skills->level)
+                                @if(!empty($skills->level))
                                     <div class="text-sm mt-0">
                                         <span class="ml-7 inline-block items-center rounded-md bg-blue-100 px-2 py-1 font-medium text-blue-700 ring-1 ring-blue-700/10">{{$skills->level}}</span>
                                     </div>
                                 @endif
                                 </div>
 
-                                @if($skills->keywords)
+                                @if(!empty($skills->keywords))
                                 <div class="mt-2 flex flex-wrap gap-2">
                                     @foreach ($skills->keywords as $keywords)
                                         <span class="ml-1 inline-block items-center rounded-sm bg-gray-100 px-2 py-1 font-medium text-gray-700">{{$keywords}}</span>
@@ -101,10 +100,10 @@
                     @foreach ($resume->projects as $projects)
                         <div class="bg-white p-5 shadow-sm rounded-lg">
                             <div class="flex flex-row-2 justify-between gap-6">
-                                @if ($projects->name)
+                                @if (!empty($projects->name))
                                         <h3 class="text-2xl font-semibold text-gray-800">{{$projects->name}}</h3>                                
                                 @endif
-                                @if($projects->startDate)
+                                @if(!empty($projects->startDate))
                                     <div class="text-sm text-gray-600 mt-1">
                                         {{$projects->startDate->format("M Y")}} - {{$projects->endDate ? $projects->endDate->format("M Y") : "Atual" }}
                                     </div>
@@ -113,13 +112,14 @@
                                 
                             @if (!empty($projects->url))
                                 <div class="mt-4">
-                                    <a href="{{$projects->url}}" class="text-blue-500 hover:underline text-sm">{{$projects->url}}</a>
+                                    <a href="{{$projects->url}}" target="_blank" class="text-blue-500 hover:underline text-sm"> {{ $projects->url }} </a>
                                 </div>
                             @endif
 
                             @if (!empty($projects->description))
                                 <h3 class="text-base text-gray-800 mt-2">{{$projects->description}}</h3>
                             @endif
+
                             @if (!empty($projects->highlights))
                                 <ul class="list-disc list-outside mt-2 space-y-0.5 ml-4">
                                     @foreach ($projects->highlights as $highlights)
@@ -129,6 +129,7 @@
                                     @endforeach
                                 </ul>
                             @endif
+
                         </div>
                     @endforeach
             </section>

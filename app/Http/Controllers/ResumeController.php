@@ -25,9 +25,6 @@ class ResumeController extends Controller
     }
     public function download ()
     {
-        Browsershot::html('<h1>Exemplo</h1>')
-    ->setChromePath('/usr/bin/google-chrome')
-    ->pdf();
 
         $resume = Cache::remember('resumeData', now()->addDay(), function () {
             $resumes = storage::disk('resumes')->get('resume.json');
@@ -37,7 +34,8 @@ class ResumeController extends Controller
         });
 
         $pdf = Pdf::view('resume', ['resume' => $resume, 'allowDownload' => false])
-            ->name($resume->basics->name . '-resume.pdf');
+            ->name($resume->basics->name . '-resume.pdf')
+            ->format('A4');
 
         return $pdf->download();
     }

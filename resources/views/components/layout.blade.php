@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{ $title ?? ''}}</title>
     @vite(['resources/js/app.js'])
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body class="text-gray-800 bg-gray-50">

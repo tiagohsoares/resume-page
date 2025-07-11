@@ -32,6 +32,12 @@
             @endif
     </x-slot:header>
 
+    @if ($allowDownload)
+        <x-download-resume-button>
+        </x-download-resume-button>
+    @endif
+    
+
             <section class="mt-10">
                 <h2 class="text-2xl font-semibold border-b border-gray-200 pb-2 mb-4">Work Experience</h2>
                 <div class="space-y-6">

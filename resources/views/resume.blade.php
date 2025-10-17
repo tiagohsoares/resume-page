@@ -47,7 +47,7 @@
                 <div class="bg-white p-5 rounded-lg shadow-sm">
                     @if (isset($work->position) && isset($work->name))
                         <div class="flex flex-row justify-between">
-                            <h3 class="text-2xl font-semibold text-gray-800"> {{$work->position}} at {{$work->name}}</h3>
+                            <h3 class="text-2xl font-semibold text-gray-800"> {{$work->position}} em {{$work->name}}</h3>
                     @endif
 
                         @if(!empty($work->startDate))

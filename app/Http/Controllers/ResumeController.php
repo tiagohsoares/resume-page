@@ -3,13 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Contracts\View\Factory;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Storage;
 use App\DataObjects\Resume;
 use Spatie\LaravelPdf\Facades\Pdf;
+use Spatie\LaravelPdf\Enums\Unit;
 use Illuminate\Support\Facades\Cache;
-use Spatie\Browsershot\Browsershot;
 
 class ResumeController extends Controller
 {
@@ -35,6 +33,7 @@ class ResumeController extends Controller
 
         $pdf = Pdf::view('resume', ['resume' => $resume, 'allowDownload' => false])
             ->name($resume->basics->name . '-resume.pdf')
+            ->margins(2.5, 2, 2.5, 2, Unit::Pixel)
             ->format('A4');
 
         return $pdf->download();

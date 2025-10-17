@@ -1,12 +1,12 @@
 {
     "basics": {
-      "name": "John Doe",
-      "label": "Programmer",
+      "name": "Tiago Soares",
+      "label": "Programador",
       "image": "",
-      "email": "john@gmail.com",
-      "phone": "(912) 555-4321",
+      "email": "tiagowenceslau11@gmail.com",
+      "phone": "(71) 98195-0069",
       "url": "https://johndoe.com",
-      "summary": "A summary of John Doe…",
+      "summary": "Back-end Developer",
       "location": {
         "address": "2712 Broadway St",
         "postalCode": "CA 94115",
@@ -15,20 +15,22 @@
         "region": "California"
       },
       "profiles": [{
-        "network": "Twitter",
-        "username": "john",
+        "network": "LinkedIn",
+        "username": "tiagosoares",
         "url": "https://twitter.com/john"
       }]
     },
     "work": [{
-      "name": "Company",
-      "position": "President",
+      "name": "",
+      "position": "Programador",
       "url": "https://company.com",
-      "startDate": "2013-01-01",
-      "endDate": "2014-01-01",
-      "summary": "Description…",
+      "startDate": "2025-05-05",
+      "endDate": "",
+      "summary": "",
       "highlights": [
-        "Started the company"
+        "Resolução de problemas",
+        "Trabalho em equipe",
+        "Dev-ops e manutenção de sites"
       ]
     }],
     "education": [{
@@ -67,12 +69,14 @@
       "keywords": [
         "HTML",
         "CSS",
-        "JavaScript"
+        "Node.js",
+        "Nest.js",
+        "PHP"
       ]
     }],
     "languages": [{
-      "language": "English",
-      "fluency": "Native speaker"
+      "language": "Inglês",
+      "fluency": "Avançado"
     }],
     "references": [{
       "name": "Jane Doe",

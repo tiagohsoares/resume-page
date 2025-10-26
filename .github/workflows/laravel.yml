@@ -1,0 +1,72 @@
+name: Laravel CI with Vite
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  laravel-tests:
+
+    runs-on: ubuntu-22.04
+
+    services:
+      # Optional: MySQL or PostgreSQL if you want to run tests with it
+      # mysql:
+      #   image: mysql:8
+      #   env:
+      #     MYSQL_ROOT_PASSWORD: root
+      #     MYSQL_DATABASE: test_db
+      #   ports:
+      #     - 3306:3306
+      #   options: >-
+      #     --health-cmd="mysqladmin ping --silent"
+      #     --health-interval=10s
+      #     --health-timeout=5s
+      #     --health-retries=3
+
+    steps:
+      - uses: actions/checkout@v4
+
+      # PHP setup
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.0'
+          coverage: none
+          extensions: mbstring, bcmath, sqlite, pcntl, curl, gd, exif
+
+      # Node.js setup for Vite
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      # Copy .env
+      - name: Copy .env
+        run: php -r "file_exists('.env') || copy('.env.example', '.env');"
+
+      # Install PHP dependencies
+      - name: Install Composer Dependencies
+        run: composer install --no-progress --no-suggest --prefer-dist
+
+      # Install Node dependencies
+      - name: Install NPM dependencies
+        run: npm ci
+
+      # Build Vite assets
+      - name: Build Vite Assets
+        run: npm run build
+
+      # Generate application key
+      - name: Generate App Key
+        run: php artisan key:generate
+
+      # Directory permissions
+      - name: Set permissions
+        run: chmod -R 777 storage bootstrap/cache
+
+      # Create SQLite database
+      - name: Create SQLite Database
+        run: |
+          mkdir -p database
+          touch database/database.sqlite

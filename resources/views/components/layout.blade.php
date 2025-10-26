@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{ $title ?? ''}}</title>
-    @vite(['resources/js/app.js', 'resources/js/app.css'])
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
@@ -16,7 +15,7 @@
             {{ $header }}
         </header>
         {{ $slot }}
-   </main> 
+   </main>
    <footer class="text-center py-6 text-gray-500 text-sm">
         <p>Last Update: {{date('F Y')}}</p>
    </footer>

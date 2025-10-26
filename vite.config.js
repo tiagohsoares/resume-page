@@ -5,22 +5,13 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
     plugins: [
         laravel({
-            input: ['resources/js/app.js', 'resources/js/app.css'],
-            refresh: [
-                'storage/resumes/resume.json',
-            ],
+            input: ['resources/js/app.js', 'resources/css/app.css'],
         }),
         tailwindcss(),
     ],
-    server: { 
-
+    server: {
         hmr: {
-
-            host: 'localhost',
-
+            host: 'host.docker.internal',
         },
-
-    }, 
+    },
 });
-
-

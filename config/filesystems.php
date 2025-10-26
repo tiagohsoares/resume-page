@@ -40,7 +40,7 @@ return [
 
         'resumes' => [
             'driver' => 'local',
-            'root' => storage_path('resumes'),
+            'root' => resource_path('data'),
             'serve' => true,
             'throw' => false,
             'report' => false,

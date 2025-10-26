@@ -5,43 +5,44 @@
       "image": "",
       "email": "tiagowenceslau11@gmail.com",
       "phone": "(71) 98195-0069",
-      "url": "https://johndoe.com",
-      "summary": "Back-end Developer",
+      "url": "",
+      "summary": "Olá, meu nome é Tiago Soares e gosto de desenvolvimento gráfico/jogos. Minhas soft skills incluem bom relacionamento interpessoal, proatividade e soluçào de problemas. Desenvolvo projetos escalavéis e projetados com orientçàoo ao objeto ",
       "location": {
-        "address": "2712 Broadway St",
-        "postalCode": "CA 94115",
-        "city": "San Francisco",
-        "countryCode": "US",
-        "region": "California"
+        "address": "Rua Henrique Dias",
+        "postalCode": "40444-000",
+        "city": "Salvador",
+        "countryCode": "BR",
+        "region": "Bahia"
       },
       "profiles": [{
         "network": "LinkedIn",
         "username": "tiagosoares",
-        "url": "https://twitter.com/john"
+        "url": "https://www.linkedin.com/in/tiago-soares-a09a15189/"
       }]
     },
     "work": [{
-      "name": "",
-      "position": "Programador",
-      "url": "https://company.com",
+      "name": "Secretaria de Educação",
+      "position": "Back-end Developer",
+      "url": "https://educacao3.salvador.ba.gov.br/",
       "startDate": "2025-05-05",
       "endDate": "",
       "summary": "",
       "highlights": [
-        "Resolução de problemas",
+        "Resolução de problemas e Debugging",
         "Trabalho em equipe",
-        "Dev-ops e manutenção de sites"
+        "MySQL e Docker"
       ]
     }],
     "education": [{
-      "institution": "University",
-      "url": "https://institution.com/",
-      "area": "Software Development",
+      "institution": "UFBA - Universidade Federal da Bahia",
+      "url": "https://www.ufba.br/",
+      "area": "Engenharia da computação",
       "studyType": "Bachelor",
-      "startDate": "2011-01-01",
-      "endDate": "2013-01-01",
+      "startDate": "2024-04-04",
+      "endDate": "2030-12-12",
       "courses": [
-        "DB1101 - Basic SQL"
+        "GruPro - Basic",
+        "English - Advanced"
       ]
     }],
     "awards": [{
@@ -64,14 +65,13 @@
       "summary": "Description…"
     }],
     "skills": [{
-      "name": "Web Development",
-      "level": "Master",
+      "name": "Desenvolvimento",
+      "level": "",
       "keywords": [
-        "HTML",
-        "CSS",
         "Node.js",
-        "Nest.js",
-        "PHP"
+        "C/C++",
+        "PHP",
+        "Docker"
       ]
     }],
     "languages": [{
@@ -83,13 +83,12 @@
       "reference": "Reference…"
     }],
     "projects": [{
-      "name": "Project",
-      "startDate": "2019-01-01",
-      "endDate": "2021-01-01",
-      "description": "Description...",
+      "name": "Projetos",
+      "startDate": "05-05-2025",
+      "endDate": "",
+      "description": "Projeto em desenvolvimeto privado",
       "highlights": [
-        "Won award at AIHacks 2016"
       ],
-      "url": "https://project.com/"
+      "url": "https://github.com/tiagohsoares"
     }]
   }

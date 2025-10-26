@@ -34,7 +34,10 @@ class ResumeController extends Controller
         $pdf = Pdf::view('resume', ['resume' => $resume, 'allowDownload' => false])
             ->name($resume->basics->name . '-resume.pdf')
             ->margins(2.5, 2, 2.5, 2, Unit::Pixel)
-            ->format('A4');
+            ->format('A4')
+             ->withBrowsershot(function ($browsershot) {
+        $browsershot->noSandbox();
+    });
 
         return $pdf->download();
     }

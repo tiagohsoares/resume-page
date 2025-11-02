@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Storage;
 use App\DataObjects\Resume;
 use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Support\Facades\Cache;
+use Log;
 
 class ResumeController extends Controller
 {
@@ -41,6 +42,7 @@ class ResumeController extends Controller
             'allowDownload' => false,
         ])->setPaper('A4', 'portrait');
 
+        Log::info('PDF Baixado');
         return $pdf->download($resume->basics->name . '-resume.pdf');
     }
 }

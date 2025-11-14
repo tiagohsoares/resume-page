@@ -6,7 +6,7 @@
       "email": "tiagowenceslau11@gmail.com",
       "phone": "(71) 98195-0069",
       "url": "",
-      "summary": "Olá, meu nome é Tiago Soares e gosto de desenvolvimento gráfico/jogos. Habilidades com C++/CMake em projetos pessoais de OpenGl. Minhas soft skills incluem bom relacionamento interpessoal, proatividade e solução de problemas. Desenvolvo projetos escaláveis e projetados com orientação ao objeto ",
+      "summary": "Meu nome é Tiago Soares e sou programador PHP/Laravel. Possuo habilidade com PHP e ferramentas tais como XDebug, familiaridade com Orientação ao Objeto e MVC. Possuo experiência com Framework Laravel e suas ferramnetas, assim como JavaScript e Blade para o front-end. Outras habilidades são: Docker, Git CI/CD, controle de versão e metodologias agéis".,
       "location": {
         "address": "Rua Henrique Dias",
         "postalCode": "40444-000",
@@ -37,11 +37,11 @@
       "institution": "UFBA - Universidade Federal da Bahia",
       "url": "https://www.ufba.br/",
       "area": "Engenharia da computação",
-      "studyType": "Bachelor",
+      "studyType": "Bacharelado",
       "startDate": "2024-04-04",
       "endDate": "2030-12-12",
       "courses": [
-        "GruPro - Basic",
+        "Curso GruPro - UFBA",
         "English - Advanced"
       ]
     }],
@@ -69,7 +69,7 @@
       "level": "",
       "keywords": [
         "Node.js",
-        "C/C++",
+        "Git",
         "PHP",
         "Docker"
       ]
